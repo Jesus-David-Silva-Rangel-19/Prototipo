@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Alice&family=Amethysta&family=Antic+Slab&family=Arbutus+Slab&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Average&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Baskervville:ital@0;1&family=Belgrano&family=Besley:ital,wght@0,400..900;1,400..900&family=BioRhyme:wght@200..800&family=Bitter:ital,wght@0,100..900;1,100..900&family=Brawler:wght@400;700&family=Bree+Serif&family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Buenard:wght@400;700&family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Corben:wght@400;700&family=Cutive&family=Domine:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Enriqueta:wght@400;500;600;700&family=Esteban&family=Faustina:ital,wght@0,300..800;1,300..800&family=Fjord+One&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gabriela&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Graduate&family=Hahmlet:wght@100..900&family=Hanuman:wght@100;300;400;700;900&family=Hepta+Slab:wght@1..900&family=Inika:wght@400;700&family=Judson:ital,wght@0,400;0,700;1,400&family=Kadwa:wght@400;700&family=Kameron:wght@400..700&family=Karma:wght@300;400;500;600;700&family=Kiwi+Maru&family=Labrada:ital,wght@0,100..900;1,100..900&family=Ledger&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lusitana:wght@400;700&family=Lustria&family=Maitree:wght@200;300;400;500;600;700&family=Manuale:ital,wght@0,300..800;1,300..800&family=Mate+SC&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Ovo&family=PT+Serif+Caption:ital@0;1&family=Petrona:ital,wght@0,100..900;1,100..900&family=Poly:ital@0;1&family=Rhodium+Libre&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Sanchez:ital@0;1&family=Slabo+13px&family=Slabo+27px&family=Vesper+Libre:wght@400;500;700;900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=Wellfleet&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Della+Respira&family=Suez+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Coustard:wght@400;900&family=Cutive&family=Hepta+Slab:wght@1..900&family=Orbitron:wght@400..900&display=swap');
+
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Bree Serif';
+}
+
+h1 {
+    font-family: 'Protest Strike';
+    font-variant: small-caps;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Protest Strike';
+    font-variant: small-caps;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 50px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.container {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.form-label {
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    border-color: #007bff;
+}
+
+.btn {
+    font-variant: small-caps;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+label {
+    font-size: 22px;    
+}

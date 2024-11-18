@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de ECG Simulado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet">
+     <!-- FontAwesome CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">
+            <i class="fas fa-heartbeat" style="color: red;"></i>
+            Diagnóstico Preventivo de ECG
+            <i class="fa-solid fa-kit-medical" style="color: green;"></i>
+        </h1>
+        <form id="ecg-form" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="paciente-id" class="form-label">
+                    <i class="fas fa-id-card" style="color: orange;"></i>
+                    ID del paciente</label>
+                <input type="text" id="paciente-id" class="form-control" placeholder="Ingrese el ID del paciente" required>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="frecuencia-cardiaca" class="form-label">
+                        <i class="fas fa-heart" style="color: red;"></i>
+                        Frecuencia cardíaca (bpm)</label>
+                    <input type="number" id="frecuencia-cardiaca" class="form-control" placeholder="Ingrese los latidos por minuto" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="intervalo-qt" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Intervalo QT (ms)</label>
+                    <input type="number" id="intervalo-qt" class="form-control" step="any" placeholder="Ingrese el intervalo QT" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="amplitud-r" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Amplitud de la onda R (mV)</label>
+                    <input type="number" id="amplitud-r" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda R" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="segmento-st" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Segmento ST (mV)</label>
+                    <input type="number" id="segmento-st" class="form-control" step="any" placeholder="Ingrese el segmento ST" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="onda-p" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Amplitud de la onda P (mV)</label>
+                    <input type="number" id="onda-p" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda P" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="complejo-qrs" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Duración del complejo QRS (ms)</label>
+                    <input type="number" id="complejo-qrs" class="form-control" placeholder="Ingrese la duración del complejo QRS" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="onda-t" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Amplitud de la onda T (mV)</label>
+                    <input type="number" id="onda-t" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda T" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="ritmo" class="form-label">
+                        <i class="fas fa-heartbeat" style="color: red;"></i>
+                        Ritmo cardíaco</label>
+                    <input type="text" id="ritmo" class="form-control" placeholder="Ej: Sinusal, Arritmia" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-4">Simular Diagnóstico</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
