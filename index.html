@@ -12,12 +12,17 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="text-center mb-4">
+
+    <!--Header-->
+    <header class="p-3 bg-dark text-white text-center">
+        <h1>
             <i class="fas fa-heartbeat" style="color: red;"></i>
-            Diagnóstico Preventivo de ECG
-            <i class="fa-solid fa-kit-medical" style="color: green;"></i>
+            Sistema de Diagnóstico Preventivo de Enfermedades Cardiovasculares
+            <i class="fa-solid fa-kit-medical" style="color: blue;"></i>
         </h1>
+    </header>
+
+    <div class="container my-5">
         <form id="ecg-form" class="card p-4 shadow-sm">
             <div class="mb-3">
                 <label for="paciente-id" class="form-label">
@@ -79,7 +84,13 @@
         </form>
     </div>
 
-<footer class="text-center p-4" style="background-color: #353636; color: white;">
+    <!--Mostrar resultados en una tabla-->
+    <div id="result-container" class="container my-5">
+
+    </div>
+
+
+<footer class="p-4 bg-dark text-white text-center" >
     <p>
         <i class="fas fa-code"></i>
         con <i class="fas fa-heart"></i> por Jesús David Silva Rangel.
@@ -107,3 +118,12 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<!--
+
+LISTA DE VERIFICACIÓN
+
+- Mostrar resultados en una tabla
+- Añadir un simbolo de información con los valores de referencia
+
+-->
