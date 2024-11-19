@@ -48,9 +48,63 @@ document.getElementById('ecg-form').addEventListener('submit', function (event) 
         diagnosticoECV = "Posible taquicardia supraventricular";
     } else if (ritmo.toLowerCase() !== "sinusal") {
         diagnosticoECV = "Arritmia significativa detectada";
-    } else {
-        diagnosticoECV = "No se detectan signos evidentes de Enfermedad Cardiovascular";
     }
+    else if (ritmo.toLowerCase() === "fibrilación auricular") {
+        diagnosticoECV = "Ritmo de fibrilación auricular detectado. Se recomienda una evaluación más detallada.";
+    }
+
+    // Si se detectan signos de ECV pero no se cumple ninguna condición anterior    
+    else if 
+        (resultado.includes("Taquicardia (latidos altos)") || resultado.includes("Intervalo QT prolongado") || resultado.includes("Elevada amplitud de la onda R") || resultado.includes("Depresión del segmento ST") || resultado.includes("Onda P elevada") || resultado.includes("Complejo QRS ancho") || resultado.includes("Onda T elevada")) {
+        diagnosticoECV = "Se detectaron signos de enfermedades cardiovasculares. Se recomienda una evaluación más detallada.";
+        }
+    // Agregar 5 enfermedades cardiovasculares comunes
+
+    // #1
+    else if (resultado.includes("Bradicardia (latidos bajos)") && resultado.includes("Intervalo QT corto") && resultado.includes("Baja amplitud de la onda R") && resultado.includes("Elevación del segmento ST") && resultado.includes("Onda P baja")) {
+        diagnosticoECV = "Posible bloqueo cardíaco";
+    }
+    // #2
+    else if (resultado.includes("Taquicardia (latidos altos)") && resultado.includes("Intervalo QT prolongado") && resultado.includes("Elevada amplitud de la onda R") && resultado.includes("Depresión del segmento ST") && resultado.includes("Onda P elevada")) {
+        diagnosticoECV = "Posible hipertrofia ventricular";
+    }
+
+    // #3 Enfermedad coronaria
+    else if (resultado.includes("Elevación del segmento ST") && resultado.includes("Complejo QRS ancho") && resultado.includes("Onda T elevada")) {
+        diagnosticoECV = "Posible enfermedad coronaria";
+    }
+
+    // #4 Insuficiencia cardíaca
+    else if (resultado.includes("Bradicardia (latidos bajos)") && resultado.includes("Elevación del segmento ST") && resultado.includes("Complejo QRS ancho") && resultado.includes("Onda T elevada")) {
+        diagnosticoECV = "Posible insuficiencia cardíaca";
+    }
+
+    // #5 Arritmia
+    else if (resultado.includes("Elevación del segmento ST") && resultado.includes("Onda P elevada") && resultado.includes("Complejo QRS ancho") && resultado.includes("Onda T elevada")) {
+        diagnosticoECV = "Posible arritmia";
+    }
+
+    // #6 Infarto agudo de miocardio
+    else if (resultado.includes("Elevación del segmento ST") && resultado.includes("Onda P elevada") && resultado.includes("Complejo QRS ancho") && resultado.includes("Onda T elevada")) {
+        diagnosticoECV = "Posible infarto agudo de miocardio";
+    }
+
+    // #7 Taquicardia supraventricular
+    else if (resultado.includes("Taquicardia (latidos altos)") && resultado.includes("Intervalo QT prolongado") && resultado.includes("Elevada amplitud de la onda R") && resultado.includes("Depresión del segmento ST") && resultado.includes("Onda P elevada")) {
+        diagnosticoECV = "Posible taquicardia supraventricular";
+    }
+
+    // #8 Accidente cerebrovascular
+    else if (resultado.includes("Bradicardia (latidos bajos)") && resultado.includes("Intervalo QT corto") && resultado.includes("Baja amplitud de la onda R") && resultado.includes("Elevación del segmento ST") && resultado.includes("Onda P baja")) {
+        diagnosticoECV = "Posible accidente cerebrovascular";
+    }
+
+    // Si no se detectan signos de ECV ECG normal
+     else {
+        diagnosticoECV = "No se detectaron signos de enfermedades cardiovasculares. Electrocardiograma dentro de los límites normales.";
+    }
+
+
 
     // Crear la tabla de resultados
     const resultContainer = document.getElementById('result-container');
@@ -119,3 +173,44 @@ document.getElementById('ecg-form').addEventListener('submit', function (event) 
     resultContainer.insertBefore(resultTitle, table);
 
 });
+
+// Lista con todos los valores de referencia de los parametros del ECG
+
+// #1 Frecuencia cardíaca
+// Bradicardia: < 60 bpm
+// Taquicardia: > 100 bpm
+// Normal: 60-100 bpm
+
+// #2 Intervalo QT
+// Corto: < 350 ms
+// Prolongado: > 450 ms
+// Normal: 350-450 ms
+
+// #3 Amplitud de la onda R
+// Baja: < 0.8 mV
+// Elevada: > 1.5 mV
+// Normal: 0.8-1.5 mV
+
+// #4 Segmento ST
+// Elevación: > 0.2 mV
+// Depresión: < -0.2 mV
+// Normal: -0.2-0.2 mV
+
+// #5 Amplitud de la onda P
+// Baja: < 0.1 mV
+// Elevada: > 0.25 mV
+// Normal: 0.1-0.25 mV
+
+// #6 Duración del complejo QRS
+// Estrecho: < 80 ms
+// Ancho: > 120 ms
+// Normal: 80-120 ms
+
+// #7 Amplitud de la onda T
+// Plana o invertida: < 0.5 mV
+// Elevada: > 1.5 mV
+// Normal: 0.5-1.5 mV
+
+// #8 Ritmo cardíaco
+// Sinusal: Normal
+// Anormal: Cualquier otro ritmo

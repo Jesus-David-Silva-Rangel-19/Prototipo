@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagnóstico de ECG Simulado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bootstrap-4/bootstrap-4.min.css" rel="stylesheet">
+
+    <!--Usar un icono de Fontawesome como favicon-->
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/heartbeat.svg" type="image/svg+xml">
+
      <!-- FontAwesome CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -33,50 +37,169 @@
             <div class="row g-3">
                 <div class="col-md-6">
                     <label for="frecuencia-cardiaca" class="form-label">
+
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de frecuencia cardiaca
+                        // Lista con todos los valores de referencia de los parametros del ECG
+
+                        // #1 Frecuencia cardíaca
+                        // Bradicardia: < 60 bpm
+                        // Taquicardia: > 100 bpm
+                        // Normal: 60-100 bpm
+
+                        // #2 Intervalo QT
+                        // Corto: < 350 ms
+                        // Prolongado: > 450 ms
+                        // Normal: 350-450 ms
+
+                        // #3 Amplitud de la onda R
+                        // Baja: < 0.8 mV
+                        // Elevada: > 1.5 mV
+                        // Normal: 0.8-1.5 mV
+
+                        // #4 Segmento ST
+                        // Elevación: > 0.2 mV
+                        // Depresión: < -0.2 mV
+                        // Normal: -0.2-0.2 mV
+
+                        // #5 Amplitud de la onda P
+                        // Baja: < 0.1 mV
+                        // Elevada: > 0.25 mV
+                        // Normal: 0.1-0.25 mV
+
+                        // #6 Duración del complejo QRS
+                        // Estrecho: < 80 ms
+                        // Ancho: > 120 ms
+                        // Normal: 80-120 ms
+
+                        // #7 Amplitud de la onda T
+                        // Plana o invertida: < 0.5 mV
+                        // Elevada: > 1.5 mV
+                        // Normal: 0.5-1.5 mV
+
+                        // #8 Ritmo cardíaco
+                        // Sinusal: Normal
+                        // Anormal: Cualquier otro ritmo
+
+                        -->
+
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de frecuencia cardiaca anteriores-->
+                        
+
                         <i class="fas fa-heart" style="color: red;"></i>
-                        Frecuencia cardíaca (bpm)</label>
+                        Frecuencia cardíaca (bpm) <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="La frecuencia cardíaca normal es de 60 a 100 latidos por minuto."></i>
+
+                    </label>
                     <input type="number" id="frecuencia-cardiaca" class="form-control" placeholder="Ingrese los latidos por minuto" required>
                 </div>
                 <div class="col-md-6">
                     <label for="intervalo-qt" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Intervalo QT (ms)</label>
+                        Intervalo QT (ms)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de intervalo QT-->
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="El intervalo QT normal es de 350 a 440 milisegundos."></i>
+                    </label>
                     <input type="number" id="intervalo-qt" class="form-control" step="any" placeholder="Ingrese el intervalo QT" required>
                 </div>
                 <div class="col-md-6">
                     <label for="amplitud-r" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Amplitud de la onda R (mV)</label>
+                        Amplitud de la onda R (mV)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de amplitud de la onda R
+                        
+                        valores
+
+                        // #3 Amplitud de la onda R
+                        // Baja: < 0.8 mV
+                        // Elevada: > 1.5 mV
+                        // Normal: 0.8-1.5 mV
+                        -->
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="La amplitud de la onda R normal es de 0.8 a 1.5 milivoltios."></i>
+                    </label>
                     <input type="number" id="amplitud-r" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda R" required>
                 </div>
                 <div class="col-md-6">
                     <label for="segmento-st" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Segmento ST (mV)</label>
+                        Segmento ST (mV)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de segmento ST
+                        // #4 Segmento ST
+                        // Elevación: > 0.2 mV
+                        // Depresión: < -0.2 mV
+                        // Normal: -0.2-0.2 mV
+
+                        -->
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="El segmento ST normal es de -0.2 a 0.2 milivoltios."></i>
+                    </label>
                     <input type="number" id="segmento-st" class="form-control" step="any" placeholder="Ingrese el segmento ST" required>
                 </div>
                 <div class="col-md-6">
                     <label for="onda-p" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Amplitud de la onda P (mV)</label>
+                        Amplitud de la onda P (mV)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de amplitud de la onda P
+
+                        // #5 Amplitud de la onda P
+                        // Baja: < 0.1 mV
+                        // Elevada: > 0.25 mV
+                        // Normal: 0.1-0.25 mV
+
+                        -->
+
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="La amplitud de la onda P normal es de 0.1 a 0.25 milivoltios."></i>
+                    </label>
                     <input type="number" id="onda-p" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda P" required>
                 </div>
                 <div class="col-md-6">
                     <label for="complejo-qrs" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Duración del complejo QRS (ms)</label>
+                        Duración del complejo QRS (ms)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de duración del complejo QRS
+
+                        // #6 Duración del complejo QRS
+                        // Estrecho: < 80 ms
+                        // Ancho: > 120 ms
+                        // Normal: 80-120 ms
+
+                        -->
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="La duración del complejo QRS normal es de 80 a 120 milisegundos."></i>
+
+                    </label>
                     <input type="number" id="complejo-qrs" class="form-control" placeholder="Ingrese la duración del complejo QRS" required>
                 </div>
                 <div class="col-md-6">
                     <label for="onda-t" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Amplitud de la onda T (mV)</label>
+                        Amplitud de la onda T (mV)
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de amplitud de la onda T
+
+                        // #7 Amplitud de la onda T
+                        // Plana o invertida: < 0.5 mV
+                        // Elevada: > 1.5 mV
+                        // Normal: 0.5-1.5 mV
+
+                        -->
+
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="La amplitud de la onda T normal es de 0.5 a 1.5 milivoltios."></i>
+
+                    </label>
                     <input type="number" id="onda-t" class="form-control" step="any" placeholder="Ingrese la amplitud de la onda T" required>
                 </div>
                 <div class="col-md-6">
                     <label for="ritmo" class="form-label">
                         <i class="fas fa-heartbeat" style="color: red;"></i>
-                        Ritmo cardíaco</label>
+                        Ritmo cardíaco
+                        
+                        <!--Simbolo de ayuda que muestra los valores de referencia médicos de ritmo cardíaco
+
+                        // #8 Ritmo cardíaco
+                        // Sinusal: Normal
+                        // Anormal: Cualquier otro ritmo
+
+                        -->
+
+                        <i class="fas fa-info-circle" style="color: blue;" data-bs-toggle="tooltip" data-bs-placement="top" title="El ritmo cardíaco normal es sinusal."></i>
+
+                    </label>
                     <input type="text" id="ritmo" class="form-control" placeholder="Ej: Sinusal, Arritmia" required>
                 </div>
             </div>
