@@ -113,7 +113,9 @@ document.getElementById('ecg-form').addEventListener('submit', function (event) 
 
     // Imprimir el titulo del resultado fuera de la tabla
     const resultTitle = document.createElement('h3');
-    resultTitle.textContent = "Resultados";
+    // Poner titulos centrado
+    resultTitle.style.textAlign = 'center';
+    resultTitle.textContent = 'Resultados';
     resultContainer.insertBefore(resultTitle, table);
 
 });
